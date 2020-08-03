@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relLayProfilePic"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/ic_launcher_circle" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgProfilePic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txtName"
+            android:layout_marginTop="10dp"
+            android:text="Java"
+            android:textColor="@color/orange"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relLayProfilePic"
+        android:layout_marginTop="5dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
+
+            <RelativeLayout
+                android:id="@+id/relLayBug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recViewOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recViewPlan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recViewOptions"
+                    android:layout_marginTop="10dp" />
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

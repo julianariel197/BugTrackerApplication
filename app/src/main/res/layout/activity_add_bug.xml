@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddBugActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolBarAddBug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        android:elevation="4dp" />
+
+    <RelativeLayout
+        android:id="@+id/relLayBugInformation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/toolBarAddBug"
+        android:background="@color/gray">
+
+        <TextView
+            android:id="@+id/txtBugInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="5dp"
+            android:text="BUG INFORMATION"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtDueDateNewBug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@id/txtBugInformation"
+            android:text="Due Date" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relLayBugInformation">
+
+        <RelativeLayout
+            android:id="@+id/relLayInformation"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:background="@color/grayish">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:text="* Title" />
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTitle"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="10dp"
+                android:text="Description" />
+
+            <TextView
+                android:id="@+id/txtProjectInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDescription"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp"
+                android:text="Project" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_toRightOf="@+id/relLayInformation"
+            android:background="@color/white">
+
+            <EditText
+                android:id="@+id/edtTxtTitle"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/edtTxtDescription"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtTxtTitle"
+                android:layout_marginStart="5dp"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/edtTextProject"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtTxtDescription"
+                android:layout_marginStart="5dp"
+                android:inputType="text" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
